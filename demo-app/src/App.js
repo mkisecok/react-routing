@@ -1,5 +1,5 @@
 import React from "react";
-
+import './App.css'
 //pages
 
 import Users from "./components/Users";
@@ -20,8 +20,9 @@ function App() {
    
     <Router >
       <div className='App'>
+        <h1 > My Routing Page</h1>
         <nav>
-          <ul>
+          <ul className='header'>
             <li>
               <Link to="/">Home</Link>
             </li>

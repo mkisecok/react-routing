@@ -19,11 +19,11 @@ function User() {
 
     return (
         <div>
-          <h1>User Details</h1>
+          <h2>User Details</h2>
           {isLoading && <SpinningCircles className='spinning-icon'/>}
           {!isLoading &&  <code>{JSON.stringify(user)}</code>}
          <br /> <br />
-         <Link to={`/user/${parseInt(id)+1}`}> Next User({parseInt(id)+1})</Link>
+         <Link to={`/user/${parseInt(id) < 9 ? parseInt(id) + 1:parseInt(id) == 9 ? 10 : 1 }`} className='next-link'> Next User({parseInt(id) < 9 ? parseInt(id) + 1:parseInt(id) == 9 ? 10 : 1 })</Link>
         </div>
     )
 }

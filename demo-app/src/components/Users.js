@@ -17,9 +17,9 @@ function Users() {
     }, [])
     return (
         <div>
-            <h1>Users</h1>
+            <h1>Users Name</h1>
             {isLoading && <SpinningCircles className='spinning-icon'/>}
-           <ul>
+           <ul className='user-name'>
                {users.map((user)=>(
                    <li key={user.id}>
                        <Link to={`/user/${user.id}`}>{user.name}</Link>
