@@ -18,8 +18,8 @@ import './App.css';
 function App() {
   return (
    
-    <Router>
-      <div>
+    <Router >
+      <div className='App'>
         <nav>
           <ul>
             <li>

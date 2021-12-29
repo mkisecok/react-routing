@@ -2,6 +2,8 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {useEffect,useState} from 'react'
 import axios from 'axios'
+import { SpinningCircles } from 'react-loading-icons'
+import './Users.css'
 
 
 function Users() {
@@ -16,7 +18,7 @@ function Users() {
     return (
         <div>
             <h1>Users</h1>
-            {isLoading && <div>...Loading</div>}
+            {isLoading && <SpinningCircles className='spinning-icon'/>}
            <ul>
                {users.map((user)=>(
                    <li key={user.id}>
