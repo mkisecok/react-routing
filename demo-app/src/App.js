@@ -1,5 +1,12 @@
 import React from "react";
 
+//pages
+
+import Users from "./components/Users";
+import About from "./components/About";
+import User from "./components/User";
+import Home from "./components/Home";
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -24,19 +31,18 @@ function App() {
             <li>
               <Link to="/users">Users</Link>
             </li>
-            <li>
-              <Link to="/user">User</Link>
-            </li>
+           
           </ul>
         </nav>
+        <hr />
 
         
         <Routes>
          
-        <Route path='/' exact element={<Home/>} />
+          <Route path='/' exact element={<Home/>} />
           <Route path='/about' element={<About/>} />
           <Route path='/users' element={<Users/>} />
-          <Route path='/user' element={<User/>} />
+          <Route path='/user/:id' element={<User/>} />
           
         </Routes>
       </div>
@@ -44,19 +50,6 @@ function App() {
  
   );
 }
-function Home() {
-  return <h2>Home</h2>;
-}
 
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
-}
-function User() {
-  return <h2>User</h2>;
-}
 
 export default App;
