@@ -24,15 +24,20 @@ function App() {
             <li>
               <Link to="/users">Users</Link>
             </li>
+            <li>
+              <Link to="/user">User</Link>
+            </li>
           </ul>
         </nav>
 
         
         <Routes>
          
+        <Route path='/' exact element={<Home/>} />
           <Route path='/about' element={<About/>} />
           <Route path='/users' element={<Users/>} />
-          <Route path='/' element={<Home/>} />
+          <Route path='/user' element={<User/>} />
+          
         </Routes>
       </div>
     </Router>
@@ -49,6 +54,9 @@ function About() {
 
 function Users() {
   return <h2>Users</h2>;
+}
+function User() {
+  return <h2>User</h2>;
 }
 
 export default App;
