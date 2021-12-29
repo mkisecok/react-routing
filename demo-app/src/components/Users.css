@@ -2,3 +2,10 @@
     fill: black;
     
 }
+.next-link,.user-name *{
+    text-decoration: none;
+    color: cornflowerblue;
+}
+.next-link:hover,.user-name *:hover{
+    color: darkblue;
+}
