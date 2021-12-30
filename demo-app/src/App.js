@@ -7,7 +7,7 @@ import About from "./components/About";
 import User from "./components/User";
 import Home from "./components/Home";
 import Photo from "./components/Photo";
-
+import Error404 from "./components/Error404";
 import {
   BrowserRouter as Router,
   Routes,
@@ -46,6 +46,7 @@ function App() {
           <Route path='/users' element={<Users/>} />
           <Route path='/user/:id' element={<User/>} />
           <Route path='/photo/:id' element={<Photo/>} />
+          <Route path='*' element={<Error404/>} />
           
         </Routes>
       </div>
