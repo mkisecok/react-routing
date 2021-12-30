@@ -1,0 +1,8 @@
+.photo-detail{
+    margin:10px 50px;
+    color: brown;
+    text-overflow: ellipsis;
+    word-wrap:break-word;
+    max-height: 3.6em;
+    line-height: 1.8em;
+}
