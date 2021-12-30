@@ -1,4 +1,5 @@
 import {useState,useEffect} from 'react'
+import {Link} from 'react-router-dom'
 import { BallTriangle } from 'react-loading-icons'
 import axios from 'axios'
 import './Home.css'
@@ -18,8 +19,12 @@ useEffect(()=>{
             
                 <div className='photos'>
                 {photos.map((photo)=>(
-                    
-                        <img key={photo.id} src={photo.url} alt={photo.title}/>
+                    <div key={photo.id}>
+                    <img  src={photo.url} alt={photo.title}/>
+                    <br/>
+                    <Link to={`/image/${photo.id}`} className='photo-link'> Go details of photo ({photo.id})</Link>
+                    </div>
+                       
                 ))}
                 </div>
             
