@@ -1,0 +1,20 @@
+.icon *{
+    stroke: brown;
+    fill: brown;
+    
+}
+.Home{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+
+}
+.photos{
+    width: 40vw;
+    margin: 0 auto;
+}
+.photos>img{
+    width: 100%;
+}
