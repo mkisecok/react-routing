@@ -5,7 +5,8 @@ import './App.css'
 import Users from "./components/Users";
 import About from "./components/About";
 import User from "./components/User";
-import Home from "./components/Home";
+import Photos from "./components/Photos";
+import Image from './components/Image'
 
 import {
   BrowserRouter as Router,
@@ -24,7 +25,7 @@ function App() {
         <nav>
           <ul className='header'>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/photos">Photos</Link>
             </li>
             <li>
               <Link to="/about">About</Link>
@@ -40,10 +41,11 @@ function App() {
         
         <Routes>
          
-          <Route path='/' exact element={<Home/>} />
+          <Route path='/photos' element={<Photos/>} />
           <Route path='/about' element={<About/>} />
           <Route path='/users' element={<Users/>} />
           <Route path='/user/:id' element={<User/>} />
+          <Route path='/image/:id' element={<Image/>} />
           
         </Routes>
       </div>
