@@ -6,6 +6,7 @@ import Users from "./components/Users";
 import About from "./components/About";
 import User from "./components/User";
 import Home from "./components/Home";
+import Photo from "./components/Photo";
 
 import {
   BrowserRouter as Router,
@@ -24,10 +25,10 @@ function App() {
         <nav>
           <ul className='header'>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/home">Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/">About</Link>
             </li>
             <li>
               <Link to="/users">Users</Link>
@@ -40,11 +41,11 @@ function App() {
         
         <Routes>
          
-          <Route path='/' element={<Home/>} />
-          <Route path='/about' element={<About/>} />
+          <Route path='/home' element={<Home/>} />
+          <Route path='/' element={<About/>} />
           <Route path='/users' element={<Users/>} />
           <Route path='/user/:id' element={<User/>} />
-          
+          <Route path='/photo/:id' element={<Photo/>} />
           
         </Routes>
       </div>

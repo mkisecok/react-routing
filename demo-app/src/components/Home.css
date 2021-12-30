@@ -8,6 +8,10 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    margin: 0 auto;
+    gap: 10px;
+    
+
 }
 .photos{
     width: 40vw;
@@ -15,8 +19,25 @@
 }
 .photos>img{
     width: 100%;
+    margin: 10px;
+    
 }
 .photo-link{
-    margin: 0px 0;
+   align-self: center;
+   text-align: center;
     padding: 10px;
+    text-decoration-line: none;
+    
+    
+}
+.container{
+    display: flex;
+    margin: 0 auto;
+    box-sizing: border-box;
+    gap: 10px;
+    
+    
+    
+    
+    
 }

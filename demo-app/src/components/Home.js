@@ -11,7 +11,9 @@ useEffect(()=>{
     .then(res=>setPhotos(res.data))
     .finally(()=> setLoading(false))
     
-},[])
+},[]);
+
+
     return (
         
         <div className='Home'>
@@ -19,10 +21,11 @@ useEffect(()=>{
             
                 <div className='photos'>
                 {photos.map((photo)=>(
-                    <div key={photo.id}>
+                    <div key={photo.id} className='container'>
                     <img  src={photo.url} alt={photo.title}/>
                     <br/>
-                    <Link to={`/image/${photo.id}`} className='photo-link'> Go details of photo ({photo.id})</Link>
+                    {/*use same color with link and img through slice methode */}
+                    <Link to={`/photo/${photo.id}`} style={{color:`#${photo.url.slice(-6)}`}} className='photo-link'> Details of photo ({photo.id})</Link>
                     </div>
                        
                 ))}
