@@ -2,12 +2,12 @@ import React from "react";
 import './App.css'
 //pages
 
-import Users from "./components/Users";
-import About from "./components/About";
-import User from "./components/User";
-import Home from "./components/Home";
-import Photo from "./components/Photo";
-import Error404 from "./components/Error404";
+import Users from "./components/Users/Users";
+import About from "./components/About/About";
+import User from "./components/Users/User";
+import Home from './components/Home/Home'
+import Photo from "./components/Home/Photo";
+import Error404 from "./components/Error404/Error404";
 import {
   BrowserRouter as Router,
   Routes,
